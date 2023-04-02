@@ -1,4 +1,4 @@
-export const avatar = '/images/avatar.jpg';
+export const avatar = './images/avatar.jpg';
 export const facebook = 'https://www.facebook.com/thesonlp/';
 export const github = 'https://github.com/thesonpb';
 export const linkedin =
