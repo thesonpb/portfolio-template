@@ -1,0 +1,51 @@
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(216, 216, 216);
+    border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.main-content {
+    min-height: calc(100vh - 60px) !important;
+    scroll-margin-top: 60px;
+}
+
+.btn-green {
+    background: #2d9d78;
+}
+.btn-green:hover {
+    background: #33b58a !important;
+}
+
+.active-tab-btn {
+    background: #e9ecef;
+    font-weight: 600;
+    color: black;
+}
+.active-tab-btn:hover {
+    background: #e9ecef !important;
+    color: black !important;
+}
+.active-tab-btn:active {
+    background: #e9ecef !important;
+    color: black !important;
+}
+.inactive-tab-btn {
+    background: transparent;
+    font-weight: 600;
+    box-shadow: none;
+}
+.inactive-tab-btn:hover {
+    background: #e9ecef !important;
+    color: black !important;
+    box-shadow: none !important;
+}
+.inactive-tab-btn:active {
+    background: #e9ecef !important;
+    color: black !important;
+    box-shadow: none !important;
+}
