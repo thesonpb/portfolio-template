@@ -3,10 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://thesonpb.github.io/portfolio-template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesonpb/portfolio-template.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "antd": "^5.3.3",
