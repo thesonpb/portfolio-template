@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'antd';
 
 function About({ avatar, skillsAndTools }) {
-    const renderSkill = (name) => (
-        <div className="border-solid border border-border rounded-xl text-center py-12 px-16 text-light text-xl font-semibold flex items-center justify-center">
+    const [showMore, setShowMore] = useState(false);
+    const renderSkill = (name, index) => (
+        <div
+            className={`border-solid border border-border rounded-xl text-center py-12 px-16 text-light text-xl font-semibold flex items-center justify-center ${
+                index >= 3 && !showMore ? 'hidden' : ''
+            } sm:block`}
+        >
             {name}
         </div>
     );
@@ -11,7 +16,7 @@ function About({ avatar, skillsAndTools }) {
         <div id="about" className="main-content bg-dark">
             <div className="max-w-6xl mx-auto px-4 pt-16">
                 <h1 className="text-light select-none">About Me</h1>
-                <div className="flex gap-x-8 mt-16 select-none">
+                <div className="flex flex-col items-center gap-y-4 sm:flex-row sm:gap-x-8 mt-16 select-none">
                     <div>
                         {avatar ? (
                             <img
@@ -31,14 +36,16 @@ function About({ avatar, skillsAndTools }) {
                             consectetur adipiscing elit. Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit.
                         </div>
-                        <Button
-                            className="mt-4 btn-green"
-                            type="primary"
-                            size="large"
-                            shape="round"
-                        >
-                            Download CV
-                        </Button>
+                        <div className="flex items-center justify-center sm:justify-start">
+                            <Button
+                                className="mt-4 btn-green"
+                                type="primary"
+                                size="large"
+                                shape="round"
+                            >
+                                Download CV
+                            </Button>
+                        </div>
                     </div>
                 </div>
                 <div className="mt-16 select-none">
@@ -46,7 +53,18 @@ function About({ avatar, skillsAndTools }) {
                         Skills and Tools
                     </h2>
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                        {skillsAndTools.map((item) => renderSkill(item))}
+                        {skillsAndTools.map((item, index) =>
+                            renderSkill(item, index)
+                        )}
+                    </div>
+                    <div className="flex items-center justify-center mt-4">
+                        <Button
+                            size="large"
+                            className="sm:hidden showmore-btn"
+                            onClick={() => setShowMore(!showMore)}
+                        >
+                            {!showMore ? 'Show more' : 'Show less'}
+                        </Button>
                     </div>
                 </div>
             </div>

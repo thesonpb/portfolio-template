@@ -1,17 +1,32 @@
 import React, { useState } from 'react';
 import { Button } from 'antd';
+import GithubIcon from '../icons/GithubIcon.jsx';
+import ShareboxIcon from '../icons/ShareboxIcon.jsx';
+import GithubOutline from '../icons/GithubOutline.jsx';
+import FolderIcon from '../icons/FolderIcon.jsx';
 
 function Works({ otherWorks, selectedWorks }) {
     const [tab, setTab] = useState(0);
 
-    const renderWork = ({ name, description, date, link, images }) => (
-        <div className="rounded-xl bg-lightGray cursor-pointer h-52 p-4 select-none">
+    const renderWork = ({
+        name,
+        description,
+        date,
+        link,
+        images,
+        technology,
+        githubLink,
+    }) => (
+        <div className="rounded-xl bg-lightGray cursor-pointer h-60 p-4 select-none">
+            <div className="flex items-center justify-between text-light">
+                <FolderIcon />
+                <div className="flex items-center gap-x-2">
+                    <GithubOutline />
+                    <ShareboxIcon />
+                </div>
+            </div>
             <h2 className="mt-0 text-light mb-2">{name}</h2>
             <div className="text-gray-900">{date}</div>
-            <div className="flex items-center justify-between">
-                <Button type="primary">Detail</Button>
-                <Button type="primary">View code</Button>
-            </div>
         </div>
     );
 

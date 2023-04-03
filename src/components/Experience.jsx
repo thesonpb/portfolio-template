@@ -14,7 +14,7 @@ function Experience({ workExperience, education }) {
         <div id="experience" className="main-content bg-dark select-none">
             <div className="max-w-6xl mx-auto px-4 pt-16">
                 <h1 className="text-light mt-0">Experience</h1>
-                <div className="flex mb-8 gap-x-8">
+                <div className="flex flex-col sm:flex-row sm:gap-x-8">
                     <div className="md:w-1/2">
                         <h3 className="text-2xl font-bold mb-4 text-light text-center">
                             Work Experience

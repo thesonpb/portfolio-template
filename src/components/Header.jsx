@@ -11,46 +11,36 @@ const Header = () => {
                     The Son
                 </a>
                 <nav className="hidden md:flex md:items-center text-base font-semibold">
-                    <div className="rounded-full cursor-pointer p-1 hover:bg-lightGray">
-                        <a
-                            href="#home"
-                            className="mx-3 no-underline text-light select-none"
-                        >
-                            Home
-                        </a>
-                    </div>
-                    <div className="rounded-full cursor-pointer p-1 hover:bg-lightGray">
-                        <a
-                            href="#about"
-                            className="mx-3 no-underline text-light select-none"
-                        >
-                            About
-                        </a>
-                    </div>
-                    <div className="rounded-full cursor-pointer p-1 hover:bg-lightGray">
-                        <a
-                            href="#experience"
-                            className="mx-3 no-underline text-light select-none"
-                        >
-                            Experience
-                        </a>
-                    </div>
-                    <div className="rounded-full cursor-pointer p-1 hover:bg-lightGray">
-                        <a
-                            href="#works"
-                            className="mx-3 no-underline text-light select-none"
-                        >
-                            Works
-                        </a>
-                    </div>
-                    <div className="rounded-full cursor-pointer p-1 hover:bg-lightGray">
-                        <a
-                            href="#contact"
-                            className="mx-3 no-underline text-light select-none"
-                        >
-                            Contact
-                        </a>
-                    </div>
+                    <a
+                        href="#home"
+                        className="no-underline text-light select-none rounded-full cursor-pointer py-1 px-3 hover:bg-lightGray"
+                    >
+                        Home
+                    </a>
+                    <a
+                        href="#about"
+                        className="no-underline text-light select-none rounded-full cursor-pointer py-1 px-3 hover:bg-lightGray"
+                    >
+                        About
+                    </a>
+                    <a
+                        href="#experience"
+                        className="no-underline text-light select-none rounded-full cursor-pointer py-1 px-3 hover:bg-lightGray"
+                    >
+                        Experience
+                    </a>
+                    <a
+                        href="#works"
+                        className="no-underline text-light select-none rounded-full cursor-pointer py-1 px-3 hover:bg-lightGray"
+                    >
+                        Works
+                    </a>
+                    <a
+                        href="#contact"
+                        className="no-underline text-light select-none rounded-full cursor-pointer py-1 px-3 hover:bg-lightGray"
+                    >
+                        Contact
+                    </a>
                 </nav>
             </div>
         </header>

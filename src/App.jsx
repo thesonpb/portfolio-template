@@ -16,6 +16,8 @@ import {
     skillsAndTools,
     workExperience,
 } from './constant/information.js';
+import { FloatButton } from 'antd';
+import UpIcon from './icons/UpIcon.jsx';
 
 function App() {
     return (
@@ -35,6 +37,7 @@ function App() {
                 />
                 <Works selectedWorks={selectedWorks} otherWorks={otherWorks} />
                 <Contact />
+                <FloatButton.BackTop icon={<UpIcon />} />
             </div>
         </div>
     );
