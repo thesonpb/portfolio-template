@@ -18,6 +18,18 @@ import {
 } from './constant/information.js';
 import { FloatButton } from 'antd';
 import UpIcon from './icons/UpIcon.jsx';
+import styled from 'styled-components';
+
+const CustomBacktop = styled(FloatButton.BackTop)`
+    background-color: #343a40;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    .ant-float-btn-body {
+        background: #343a40;
+    }
+    .ant-float-btn-icon {
+        color: #e9ecef !important;
+    }
+`;
 
 function App() {
     return (
@@ -37,7 +49,7 @@ function App() {
                 />
                 <Works selectedWorks={selectedWorks} otherWorks={otherWorks} />
                 <Contact />
-                <FloatButton.BackTop icon={<UpIcon />} />
+                <CustomBacktop icon={<UpIcon />} />
             </div>
         </div>
     );

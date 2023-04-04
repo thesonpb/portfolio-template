@@ -5,6 +5,7 @@ function About({ avatar, skillsAndTools }) {
     const [showMore, setShowMore] = useState(false);
     const renderSkill = (name, index) => (
         <div
+            key={index}
             className={`border-solid border border-border rounded-xl text-center py-12 px-16 text-light text-xl font-semibold flex items-center justify-center ${
                 index >= 3 && !showMore ? 'hidden' : ''
             } sm:block`}

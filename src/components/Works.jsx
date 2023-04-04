@@ -6,17 +6,19 @@ import GithubOutline from '../icons/GithubOutline.jsx';
 function Works({ otherWorks, selectedWorks }) {
     const [tab, setTab] = useState(0);
 
-    const renderTechnology = (item) => <Tag color="#60a5fa">{item}</Tag>;
-    const renderWork = ({
-        name,
-        description,
-        date,
-        link,
-        image,
-        technology,
-        githubLink,
-    }) => (
-        <div className="rounded-xl bg-lightGray cursor-pointer h-60 p-4 select-none">
+    const renderTechnology = (item, index) => (
+        <Tag key={index} color="#60a5fa">
+            {item}
+        </Tag>
+    );
+    const renderWork = (
+        { name, description, date, link, image, technology, githubLink },
+        index
+    ) => (
+        <div
+            key={index}
+            className="rounded-xl bg-lightGray cursor-pointer h-60 p-4 select-none"
+        >
             <div className="flex items-center justify-between text-light mb-2 gap-x-2">
                 <div className="truncate">
                     <Tooltip title={name}>
@@ -56,12 +58,14 @@ function Works({ otherWorks, selectedWorks }) {
                 ) : (
                     <div className="bg-blue-400 object-cover object-center h-full w-full rounded-md" />
                 )}
-                <div className="rounded-md absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 transition-opacity hover:opacity-100 px-4 py-2">
+                <div className="rounded-md absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 transition-opacity hover:opacity-100 px-4 py-2 flex flex-col justify-between">
                     <p className="line-clamp-5 mt-0 mb-2 text-sm">
                         {description}
                     </p>
                     <div className="flex flex-wrap gap-y-2 line-clamp-2">
-                        {technology?.map((item) => renderTechnology(item))}
+                        {technology?.map((item, index) =>
+                            renderTechnology(item, index)
+                        )}
                     </div>
                 </div>
             </div>
@@ -95,8 +99,8 @@ function Works({ otherWorks, selectedWorks }) {
                     </Button>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                    {(tab === 0 ? selectedWorks : otherWorks).map((item) =>
-                        renderWork(item)
+                    {(tab === 0 ? selectedWorks : otherWorks).map(
+                        (item, index) => renderWork(item, index)
                     )}
                 </div>
             </div>

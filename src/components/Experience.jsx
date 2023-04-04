@@ -1,10 +1,16 @@
 import React from 'react';
 
 function Experience({ workExperience, education }) {
-    const renderExperience = ({ place, dateRange, description }) => (
-        <div className="mb-10">
+    const renderExperience = (
+        { place, dateRange, description, link },
+        index
+    ) => (
+        <div className="mb-10" key={index}>
             <p className="text-gray-900 text-sm mb-0">{dateRange}</p>
-            <h4 className="text-xl font-semibold text-gray-900 mt-2 mb-2">
+            <h4
+                className="text-xl font-semibold text-gray-900 mt-2 mb-2 cursor-pointer hover:text-light"
+                onClick={() => window.open(link, '_blank')}
+            >
                 {place}
             </h4>
             <p className="text-base text-light mt-0">{description}</p>
@@ -23,8 +29,8 @@ function Experience({ workExperience, education }) {
                             className="p-4 bg-lightGray rounded-xl"
                             style={{ height: '100%' }}
                         >
-                            {workExperience.map((item) =>
-                                renderExperience(item)
+                            {workExperience.map((item, index) =>
+                                renderExperience(item, index)
                             )}
                         </div>
                     </div>
@@ -37,7 +43,9 @@ function Experience({ workExperience, education }) {
                             className="p-4 bg-lightGray rounded-xl"
                             style={{ height: '100%' }}
                         >
-                            {education.map((item) => renderExperience(item))}
+                            {education.map((item, index) =>
+                                renderExperience(item, index)
+                            )}
                         </div>
                     </div>
                 </div>

@@ -34,14 +34,14 @@ function Home({ avatar, github = '#', linkedin = '#', facebook = '#' }) {
                         <FacebookIcon />
                     </a>
                 </div>
-                <Button
+                {/* <Button
                     type="primary"
                     className="mt-8 bg-blue-500 w-32"
                     size="large"
                     shape="round"
                 >
                     Hire me
-                </Button>
+                </Button> */}
             </div>
         </div>
     );

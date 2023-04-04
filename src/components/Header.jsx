@@ -39,7 +39,7 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 z-50 bg-dark shadow w-full">
+        <header className="fixed top-0 z-40 bg-dark shadow w-full">
             <div className="container flex items-center justify-between px-4 py-3 mx-auto">
                 <a
                     href="#"
