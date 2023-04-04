@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form, Input, message } from 'antd';
+import { Form, Input } from 'antd';
 import emailjs from '@emailjs/browser';
 import { EMAIL_JS } from '../constant/constant.js';
 import styled from 'styled-components';

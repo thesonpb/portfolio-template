@@ -2,7 +2,6 @@ import React from 'react';
 import GithubIcon from '../icons/GithubIcon.jsx';
 import LinkedinIcon from '../icons/LinkedinIcon.jsx';
 import FacebookIcon from '../icons/FacebookIcon.jsx';
-import { Button } from 'antd';
 
 function Home({ avatar, github = '#', linkedin = '#', facebook = '#' }) {
     return (
