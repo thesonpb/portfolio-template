@@ -59,7 +59,7 @@
     color: #e9ecef !important;
 }
 .showmore-btn:active {
-    background: #2c3236;
+    background: transparent !important;
     border-color: #525866 !important;
     color: #e9ecef !important;
 }
