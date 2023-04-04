@@ -1,32 +1,70 @@
 import React, { useState } from 'react';
-import { Button } from 'antd';
-import GithubIcon from '../icons/GithubIcon.jsx';
+import { Button, Tag, Tooltip } from 'antd';
 import ShareboxIcon from '../icons/ShareboxIcon.jsx';
 import GithubOutline from '../icons/GithubOutline.jsx';
-import FolderIcon from '../icons/FolderIcon.jsx';
 
 function Works({ otherWorks, selectedWorks }) {
     const [tab, setTab] = useState(0);
 
+    const renderTechnology = (item) => <Tag color="#60a5fa">{item}</Tag>;
     const renderWork = ({
         name,
         description,
         date,
         link,
-        images,
+        image,
         technology,
         githubLink,
     }) => (
         <div className="rounded-xl bg-lightGray cursor-pointer h-60 p-4 select-none">
-            <div className="flex items-center justify-between text-light">
-                <FolderIcon />
+            <div className="flex items-center justify-between text-light mb-2 gap-x-2">
+                <div className="truncate">
+                    <Tooltip title={name}>
+                        <h3 className="mt-0 text-light mb-1 truncate">
+                            {name}
+                        </h3>
+                    </Tooltip>
+                    <div className="text-gray-900 text-sm">{date}</div>
+                </div>
                 <div className="flex items-center gap-x-2">
-                    <GithubOutline />
-                    <ShareboxIcon />
+                    <Tooltip title="Github">
+                        <div
+                            className="hover:text-greenest cursor-pointer"
+                            onClick={() => window.open(githubLink, '_blank')}
+                        >
+                            <GithubOutline />
+                        </div>
+                    </Tooltip>
+                    <Tooltip title="External Link">
+                        <div
+                            className="hover:text-greenest cursor-pointer"
+                            onClick={() => window.open(link, '_blank')}
+                        >
+                            <ShareboxIcon />
+                        </div>
+                    </Tooltip>
                 </div>
             </div>
-            <h2 className="mt-0 text-light mb-2">{name}</h2>
-            <div className="text-gray-900">{date}</div>
+
+            <div className="relative w-full h-[180px]">
+                {image ? (
+                    <img
+                        src={`./images/${image}`}
+                        alt="images"
+                        className="object-cover object-center h-full w-full rounded-md"
+                    />
+                ) : (
+                    <div className="bg-blue-400 object-cover object-center h-full w-full rounded-md" />
+                )}
+                <div className="rounded-md absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 transition-opacity hover:opacity-100 px-4 py-2">
+                    <p className="line-clamp-5 mt-0 mb-2 text-sm">
+                        {description}
+                    </p>
+                    <div className="flex flex-wrap gap-y-2 line-clamp-2">
+                        {technology?.map((item) => renderTechnology(item))}
+                    </div>
+                </div>
+            </div>
         </div>
     );
 

@@ -51,11 +51,29 @@ export const education = [
 export const selectedWorks = [
     {
         name: 'Component Craft',
-        description: 'description',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
         date: 'May 2023',
-        githubLink: 'github-link.com',
-        link: 'project-link.com',
-        images: ['image1.png', 'image2.png'],
+        githubLink: 'https://github-link.com',
+        link: 'https://project-link.com',
+        image: 'component-craft.png',
+        technology: [
+            'React',
+            'Craft.js',
+            'Ant design',
+            'TailwindCSS',
+            'Spring Boot',
+            'Mysql',
+        ],
+    },
+    {
+        name: 'Component Craft asdf df asdf sd asfdf asdfd 22',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+        date: 'May 2023',
+        githubLink: 'https://github-link.com',
+        link: 'https://project-link.com',
+        image: 'component-craft.png',
         technology: [
             'React',
             'Craft.js',
@@ -67,11 +85,12 @@ export const selectedWorks = [
     },
     {
         name: 'Component Craft',
-        description: 'description',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
         date: 'May 2023',
-        githubLink: 'github-link.com',
-        link: 'project-link.com',
-        images: ['image1.png', 'image2.png'],
+        githubLink: 'https://github-link.com',
+        link: 'https://project-link.com',
+        image: 'component-craft.png',
         technology: [
             'React',
             'Craft.js',
@@ -83,11 +102,12 @@ export const selectedWorks = [
     },
     {
         name: 'Component Craft',
-        description: 'description',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
         date: 'May 2023',
-        githubLink: 'github-link.com',
-        link: 'project-link.com',
-        images: ['image1.png', 'image2.png'],
+        githubLink: 'https://github-link.com',
+        link: 'https://project-link.com',
+        image: 'component-craft.png',
         technology: [
             'React',
             'Craft.js',
@@ -99,11 +119,12 @@ export const selectedWorks = [
     },
     {
         name: 'Component Craft',
-        description: 'description',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
         date: 'May 2023',
-        githubLink: 'github-link.com',
-        link: 'project-link.com',
-        images: ['image1.png', 'image2.png'],
+        githubLink: 'https://github-link.com',
+        link: 'https://project-link.com',
+        image: 'component-craft.png',
         technology: [
             'React',
             'Craft.js',
@@ -115,27 +136,12 @@ export const selectedWorks = [
     },
     {
         name: 'Component Craft',
-        description: 'description',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
         date: 'May 2023',
-        githubLink: 'github-link.com',
-        link: 'project-link.com',
-        images: ['image1.png', 'image2.png'],
-        technology: [
-            'React',
-            'Craft.js',
-            'Ant design',
-            'TailwindCSS',
-            'Spring Boot',
-            'Mysql',
-        ],
-    },
-    {
-        name: 'Component Craft',
-        description: 'description',
-        date: 'May 2023',
-        githubLink: 'github-link.com',
-        link: 'project-link.com',
-        images: ['image1.png', 'image2.png'],
+        githubLink: 'https://github-link.com',
+        link: 'https://project-link.com',
+        image: 'component-craft.png',
         technology: [
             'React',
             'Craft.js',
@@ -149,11 +155,12 @@ export const selectedWorks = [
 export const otherWorks = [
     {
         name: 'Component Craft',
-        description: 'description',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
         date: 'May 2023',
-        githubLink: 'github-link.com',
-        link: 'project-link.com',
-        images: ['image1.png', 'image2.png'],
+        githubLink: 'https://github-link.com',
+        link: 'https://project-link.com',
+        image: 'component-craft.png',
         technology: [
             'React',
             'Craft.js',
